@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object Learning</title>
+</head>
+<body>
+<script type="text/javascript">
+	var bio ={name:"Elavarasan",
+		lastname:"S",
+		color:"black",
+		bike:"RE",
+		fullName: function(){return this.name+" "+this.lastname}
+		};
+
+		document.write(` Full Name= ${bio.fullName()}<br>`);
+		document.write(`bodyColor Color= ${bio["color"]}`);
+		
+</script>
+<br>
+<button onmouseover="this.innerHTML++">0</button>
+
+<script type="text/javascript">
+	let name= new String("Elavarasan")
+	document.write(typeof(name));
+
+// let nextname = new String("Elavarasan");
+// document.write(name===nextname);
+
+</script>
+
+<script type="text/javascript">
+	var a=["a","b","c"];
+	var data;
+	function callme(b){
+		data +=`<table border=1 style="border-collapse: collapse">`
+		for(var i=0;i<b.length;i++){
+		data += `
+		<td>${b[i]}</td>
+		`;
+		}
+		data += "</table>"
+		document.write(data);	
+	}
+callme(a);
+</script>
+</body>
+</html>

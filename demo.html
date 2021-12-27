@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<center><h1>Sample JavaScript Programs</h1></center>
+
+	<h3>1) find sqrt in array</h3>
+	<p>The array values is 4, 9, 16, 25</p>
+	<button onclick="disvar()">Click</button>
+	<h4>Output: </h4>
+	<label id="var1"></label>
+	<hr/>
+
+
+	<script type="text/javascript">
+		function disvar(){
+			const numbers = [4, 9, 16, 25];
+			document.getElementById("var1").innerHTML = numbers.map(Math.sqrt);
+		}
+	</script>
+
+
+
+
+<h3>2) Display Random number in alert box</h3>
+<p>While click Button display random number 0 to 9 </p>
+<button onclick="logo()">Random</button>
+<hr/>
+
+
+<script>
+	function logo(){
+		var r = Math.floor(Math.random() * 10);
+		alert(r);
+	}	
+</script>
+
+
+<h3>3) Alert Box in JavaScript</h3>
+<p>While click button 900+26 Output will display in alert box </p>
+<button onclick="alerts()">alert</button>
+<hr/>
+
+
+<script>
+	var v1 =900;
+	var v2 =26;
+	 function alerts(){
+	 	
+	 	let c= v1+v2;
+
+	 	alert(`The Additon of 900+26 is ${c}`);
+	 }
+</script>
+
+
+
+<h3>4)Prompt Box in JavaScript</h3>
+<p>While click button Prompt Box will Open</p>
+<button onclick="pro()">Prompt</button><br/>
+<h4>Output:</h4>
+<h2 id="pro"></h2>
+<hr/>
+
+<script>
+	function pro(){
+		let name=prompt("Enter the Your Beautiful name");
+		let text;
+		if(name==null || name==""){
+			text="Sorry, You not enter Your name";
+		}
+		else{
+			text = `Hello ${name}`;
+		}
+		document.getElementById('pro').innerHTML=text;
+	}
+</script>
+
+
+<h3>5) Confirm in JavaScript</h3>
+<p>While click button confirm Box will Open Answer it Yes or No</p>
+<button onclick="con()">Confirm</button>
+<h4>Output:</h4>
+<h2 id="con"></h2>
+<hr/>
+
+<script>
+	function con(){
+		let txt;
+		if (confirm("Did You Like my sample programs")) {
+ 			 txt = "Thank you, for the Appreciation";
+		} else {
+  			txt = "I will improve my skill next time";
+		}
+		document.getElementById('con').innerHTML=txt;
+	}
+</script>
+
+<button onclick="Rect()">Area Reactable</button>
+<script type="text/javascript">
+	function Rect(){
+		var l=prompt("Enter the length");
+		var b=prompt("enter the breath");
+		let ans=l*b;
+		alert(`The Area of Reactangle ${ans}`);
+
+	}
+</script>
+<button onclick="posneg()">check</button>
+<script type="text/javascript">
+	function posneg(){
+		var v5=prompt("enter the number");
+		if(v5>0){
+			alert("positive");
+		}
+		else{
+			alert("negative");
+		}
+	}
+</script>
+<button onclick="greet()">time</button>
+<script type="text/javascript">
+	function greet(){
+	var welcome;  
+    var date = new Date();  
+    var hour = date.getHours();  
+    var minute = date.getMinutes();  
+    var second = date.getSeconds();  
+    if (minute < 10) {  
+      minute = "0" + minute;  
+    }  
+    if (second < 10) {  
+      second = "0" + second;  
+    }  
+    if (hour < 12) {  
+      welcome = "good morning";  
+    } else if (hour < 17) {  
+      welcome = "good afternoon";  
+    } else {  
+      welcome = "good evening";  
+    }  
+    alert(welcome);
+}
+</script>
+
+<button onclick="Rects()">perimter Reactable</button>
+<script type="text/javascript">
+	function Rects(){
+		let ll=prompt("Enter the length");
+		let bb=prompt("enter the breath");
+		let anss= 2*(ll+bb);
+		alert(`The perimeter of Reactangle ${anss}`);
+
+	}
+</script>
+<button onclick="square()">square</button>
+<script type="text/javascript">
+	function square(){
+		var a =prompt("Enter the length");
+		
+		
+		let ans1= 4*a;
+		alert(`perimeter ${ans1}`);
+
+	}
+</script>
+
+<button onclick="tri()">Triangle</button>
+<script type="text/javascript">
+	function tri(){
+		var base=prompt("Enter the base");
+		var height=prompt("enter the height");
+		let ans= base*height/2;
+		alert(`The triangle ${ans}`);
+
+	}
+</script>
+<button onclick="bte()">20 t0 100</button>
+<script type="text/javascript">
+	function bte(){
+		let v;
+	var k1 = prompt("Enter the number");
+	if(k1>=20 && k1<=100){
+		v="the number is between 20 to 100";
+	}
+	else{
+		v="the number not between 20 to 100";
+	}
+	alert(v)
+}
+</script>
+<button onclick="reverse()">reverse</button>
+<script type="text/javascript">
+	function reverse(){
+		var a = prompt("enter the two or more numbers");
+		var lenn=a.split("").reverse().join();
+		var jj=lenn.replace(/,/g,"");
+		alert(jj);
+	}
+</script>
+</body>
+<style type="text/css">
+*{
+	font-family: "Times New Roman", Times, serif;
+}
+</style>
+</html>

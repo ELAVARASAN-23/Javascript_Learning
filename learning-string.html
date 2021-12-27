@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Learning Strings</title>
+</head>
+<body>
+<script type="text/javascript">
+	//concate to strings
+	let a="hello";
+	let b= "world!";
+	document.write("This concate the string"+a.concat(" ",b));
+
+	document.write("<br>It\'s me<br>")
+	let v = "apple banana icecream banana";
+
+	
+	document.write(v.slice(6,13))
+	document.write(v.replace(/banana/g,"strawberry").toUpperCase());
+
+	let num = "5";
+	document.write(num.padEnd(4,120)+"<br>");
+	document.write(num.padStart(4,120));
+	
+	let arr=["a","b","c","d","e"];
+	document.write(arr.reverse());
+	let snum = [1,2,3,4,5,6,7]
+	document.write(Math.max.apply(null,snum));
+
+	const n1 = [45,6,23,12,56,89,13];
+	function mapfun(value,index,array){
+		return value*2;
+	}
+	document.write("<br>"+n1.map(mapfun));
+
+	
+	var d = new Date("2021-08-05");
+	document.write(toString(Date.now()))
+</script>
+
+</body>
+</html>
