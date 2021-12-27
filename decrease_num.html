@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="show">0</div>
+<script type="text/javascript">
+	function hello(){
+		var sec=document.getElementById('show').value;
+		
+		document.getElementById('show').innerHTML++;
+		if(sec>30){
+			clear(timeout);
+		}
+		var interval=window.setInterval(hello,1000);
+	}
+	hello();
+</script>
+</body>
+</html>
+
+function waitFunc(){
+ console.log("This will be logged every 5 seconds");
+}
+var interval = window.setInterval(waitFunc,5000);
+window.setTimeout(function(){
+ clearInterval(interval);
+},32000);

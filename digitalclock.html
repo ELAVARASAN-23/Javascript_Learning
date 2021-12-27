@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital clock</title>
+</head>
+<body>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+		}
+		#clock{
+			margin: 0;
+			top: 50%;
+			text-align: center;
+			font-size: 40px;
+			border: 2px solid green;
+			width: auto;
+						
+		}
+	</style>
+
+	<div id="clock"></div>
+
+<script type="text/javascript">
+	setInterval(digtal,1000); 
+
+	function digtal(){
+		let d=new Date();
+		document.getElementById('clock').innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+	}
+</script>
+</body>
+</html>

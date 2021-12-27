@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Hello Worrld</p>
+
+	<style type="text/css">
+		body{
+			background-color: white;
+			color: black;
+			font-size: 25px;
+		}
+		.dark-mode{
+			background-color: black;
+			color: white;
+		}
+		button{
+			float: right;
+			border-color: purple;
+			background-color: black;
+			color: purple;
+			font-weight: bold;
+		}
+		
+	</style>
+
+	<button onclick="dark()">Dark mode</button>
+
+	<script type="text/javascript">
+		function dark(){
+			var element=document.body;
+			element.classList.toggle("dark-mode");
+			
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calulation</title>
+</head>
+<body>
+	<header>
+		<h1>Basic Calculator Operations</h1>
+	</header>
+	<style type="text/css">
+		#add{
+			margin-left: 25px;
+			padding: 5px;
+			background-color: black;
+			opacity: 5;
+			height: 200px;
+			width: 200px;
+			display: block;
+		}
+		#num1,#num2,#but1,#addition{
+			margin-top: 15px;
+		}
+	</style>
+	<div id='add'>
+		<input type="text" id='num1' placeholder='enter the first number'>
+		<input type="text"  id='num2' placeholder="Enter the second number">
+		<input type="button" onclick="add()" value="add" id='but1' >
+		<div id='addition'style="color: blue; text-align: center"></div>
+	</div>
+	<script type="text/javascript">
+		function add(){
+		var a=document.getElementById('num1').value;
+		var b=document.getElementById('num2').value;
+		var c=parseInt(a)+parseInt(b);
+		document.getElementById('addition').innerHTML=c;
+	}
+	</script>
+
+</body>
+</html>
