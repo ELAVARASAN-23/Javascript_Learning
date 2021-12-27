@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Employee Payroll</title>
+</head>
+<body>
+<center><h1>employee Bonus</h1>
+<input type="text" name="" id="amount" placeholder="Enter the amount">
+<button onclick="pay()">Click</button>
+<h2 id="value"></h2></center>
+<script>
+	function pay(){   
+	var amt =document.getElementById('amount').value;
+	var shift=prompt("Enter shift 1 or 2");
+	var totamt;
+	if(shift==1){
+		 totamt = parseInt(amt)+2000;
+	}
+	else{
+		totamt =parseInt(amt)+1500;
+	}
+	document.getElementById('value').innerHTML=`Your salary = ${amt}<br>
+												Your Total Amount =${totamt}`;
+}
+</script>
+</body>
+</html>

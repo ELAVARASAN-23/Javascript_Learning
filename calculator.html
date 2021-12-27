@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+</head>
+<body>
+<div id="outerlayout">
+		<center><h1>Calculator</h1></center>
+		<input type="text" name="" id="output" style="width: 98%;"><br><br>
+		<button onclick="cal(this.value)" value=1>1</button>
+		<button onclick="cal(this.value)" value=2>2</button>
+		<button onclick="cal(this.value)" value=3>3</button>
+		<button onclick="cal(this.value)" value=c>C</button><br>
+		<button onclick="cal(this.value)" value=4>4</button>
+		<button onclick="cal(this.value)" value=5>5</button>
+		<button onclick="cal(this.value)" value=6>6</button>
+		<button onclick="cal(this.value)" value="+">+</button><br>
+		<button onclick="cal(this.value)" value=7>7</button>
+		<button onclick="cal(this.value)" value=8>8</button>
+		<button onclick="cal(this.value)" value=9>9</button>
+		<button onclick="cal(this.value)" value="-">-</button><br>
+		<button onclick="cal(this.value)" value=0>0</button>
+		<button onclick="cal(this.value)" value=".">.</button>
+		<button onclick="cal(this.value)" value="%">%</button>
+		<button onclick="cal(this.value)" value="x">x</button><br><br>
+		<button id="calout" onclick="output()">Calculate</button>
+</div>
+</body>
+</html>
+<style type="text/css">
+body{
+	background-color: black;
+}
+	#outerlayout{
+		padding: 10px;
+		height: 430px;
+		width: 380px;
+		background-color: blueviolet;
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%,-50%);
+	}
+	#output{
+		max-width: 96%;
+		height: 50px;
+		font-size: 40px;
+	}
+	button{
+		width: 90px;
+		height: 50px;
+		background-color: black;
+		color: white;
+	}
+	#calout{
+		width: 97%;
+		background-color: blue;
+		color: white;
+		border-color: blue;
+	}
+	#calout:hover{
+		background-color: green;
+		border-color: green;
+	}
+	button:hover{
+		background-color: green;
+		border-color: green;
+	}
+</style>
+
+<script>
+	function cal(val){
+		if(val=="c"){
+			return document.getElementById('output').value="";
+		}
+		document.getElementById('output').value+=val;
+	}
+	function output(){
+		var get = document.getElementById('output').value;
+		document.getElementById('output').value=eval(get);
+	}
+</script>
+
+
+
+
+
