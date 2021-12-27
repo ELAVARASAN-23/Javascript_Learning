@@ -2,34 +2,33 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Student Array</title>
 </head>
 <body>
-<h2>Calculate student mark in arrays</h2>
-<p>While click button in ask name  and 3 subject marks </p>
-<button onclick="stu()">Start</button>
-<h1 id="output"></h1>
-<script>
-	function stu(){
-		var tot =[];  
-		var name= prompt("Enter the name");
-		let m1 =prompt("Enter first subject");
-		tot.push(parseInt(m1));
-		let m2 = prompt("Enter second subject");
-		tot.push(parseInt(m2));
-		let m3 =prompt("Enter third subject");
-		tot.push(parseInt(m3));
-		let t=0;
-	
-		for(i=0;i<tot.length;i++){
-			 t+=tot[i];
-		}
-		var avg = t/300*100;
+<center>
+<h2>This marks are stored in array in and total all marks</h2>
+<h3 id="answer"></h3>
+<h3 id="answer1"></h3>
+</center>
+<script type="text/javascript">
+	var name="kowsi";
+	var marks=[90,80,90,60];
+	var totmarks=0;
 
-		document.getElementById('output').innerHTML=`Name = ${name}<br>Mark1 = ${m1}<br>
-													Mark2 = ${m2}<br>Mark3 = ${m3}<br>
-													Total = ${t}<br>Avgerage = ${avg}`;
+	for(i=0;i<marks.length;i++){
+		totmarks+=marks[i];
 	}
+
+	var name2="sowmi";
+	var marks2=[90,90,50,70];
+	var totmarks2=0;
+	
+	for(i=0;i<marks2.length;i++){
+		totmarks2+=marks2[i];
+	}
+	document.getElementById('answer').innerHTML="Name :"+name+"<br>"+"Total Marks :"+totmarks;
+	document.getElementById('answer1').innerHTML="Name :"+name2+"<br>"+"Total Marks :"+totmarks2;
+
 </script>
 </body>
 </html>

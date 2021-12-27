@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<p id="show"></p>
+<script type="text/javascript">
+
+async function hello() {
+let response = await fetch('https://ela1223.github.io/hello/data.json'); // if HTTP-status is 200-299
+  // get the response body (the method explained below)
+  let json = await response.json();
+  console.log(json[0]["id"]);
+  // document.getElementById("show").innerHTML=json["topping"][1]['type'];
+
+
+}
+
+hello()
+	
+const show =[
+  {
+  "id": "101",
+  "name": "Elavarasan",
+  "role": "Software Developer",
+  "languages": ["Java","Python","php","JavaScript"],
+  "Interest": ["web Development","App Development",],    
+  },
+  {
+  "id": "102",
+  "name": "Naresh",
+  "role": "Adminstrator",
+  "languages": ["Java","Python","JavaScript"],
+  "Interest": ["web Development","cloud"],    
+  },
+  {
+  "id": "103",
+  "name": "Mouriesh",
+  "role": "Cloud Engineer",
+  "languages": ["Java","Python","JavaScript","Golang"],
+  "Interest": ["cloud Development","IOT"],    
+  },
+  {
+  "id": "104",
+  "name": "Dhoni",
+  "role": "Tester Developer",
+  "languages": ["Java","Python","php","JavaScript","Ruby"],
+  "Interest": ["App Development"],    
+  },
+  {
+  "id": "105",
+  "name": "Jack Sparrow",
+  "role": " Network engineer",
+  "languages": ["C","C++","Java","Python"],
+  "Interest": ["Cloud"],    
+  },
+  {
+  "id": "106",
+  "name": "Elon musk",
+  "role": "Data Scientist",
+  "languages": ["Python","R","Scala"],
+  "Interest": ["Robotics","AI"],    
+  },
+];
+console.log(show);	
+</script>
+</body>
+</html>
