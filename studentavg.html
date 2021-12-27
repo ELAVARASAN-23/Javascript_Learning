@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Marks diffrenece</title>
+</head>
+<body bgcolor="blue">
+	<center><h1>Student Mark Validation</h1></center>
+<center>
+<form method="" action="" style="width: 300px;">
+
+	<input type="text" name="" id="stu1" placeholder="Enter Student name" required><br/>
+	<input type="number" name="" id="sm1" placeholder="Enter Student mark1" required>
+	<input type="number" name="" id="sm2" placeholder="Enter Student mark2" required>
+	<input type="number" name="" id="sm3" placeholder="Enter Student mark3" required>
+
+<br><br><br>
+<input type="text" name="" id="stu2" placeholder="Enter Student name" required>
+<input type="number" name="" id="s2m1" placeholder="Enter Student mark1" required>
+<input type="number" name="" id="s2m2" placeholder="Enter Student mark2" required>
+<input type="number" name="" id="s2m3" placeholder="Enter Student mark3" required><br><br>
+<input type="button" name="" onclick="validate()" value="Validate">
+</form>
+
+<p id="stu_1"></p>
+<p id="stu_2"></p>
+</center>
+<script type="text/javascript">
+	function validate(){
+	var g=document;
+	var stu1name = g.getElementById("stu1").value;
+	var sm1= parseInt(g.getElementById('sm1').value);
+	var sm2= parseInt(g.getElementById('sm2').value);
+	var sm3= parseInt(g.getElementById('sm3').value);
+
+	var stu2name = g.getElementById("stu2").value;
+	var s2m1= parseInt(g.getElementById('s2m1').value);
+	var s2m2= parseInt(g.getElementById('s2m2').value);
+	var s2m3= parseInt(g.getElementById('s2m3').value);
+
+	stu1_tot = sm1+sm2+sm3;
+	stu2_tot = s2m1+s2m2+s2m3;
+	
+	var s1_per =(stu1_tot/300)*100;
+	var s2_per = (stu2_tot/300)*100;
+
+	document.getElementById('stu_1').innerHTML=`${stu1name} Percentage is ${s1_per}`;
+	document.getElementById('stu_2').innerHTML=`${stu2name} Percentage is ${s2_per}`;
+
+
+	if(s1_per>s2_per){
+		var msg = `${stu1name} and  ${stu2name} Percentage diffrence is ${s1_per - s2_per} ${stu1name} got more percentage`;
+	}
+	else if(s1_per<s2_per){
+		var msg = `${stu1name} and ${stu2name} Percentage diffrence is ${s2_per - s1_per}${stu2name} got more percentage`;
+	}
+	else if(s1_per==s2_per){
+		var msg = "No mark diffrence between because same percentage";
+	}
+		alert(msg);
+
+}
+
+</script>
+</body>
+</html>

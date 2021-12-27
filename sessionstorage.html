@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Session Stroage Learning</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<input type="text" name="" value="no" id="val">
+<script>
+	let val=document.getElementById('val').value;
+	document.write(val);
+sessionStorage.setItem(val,"1")
+
+document.write(sessionStorage['no'])
+// for(let i=0; i<sessionStorage.length; i++) {
+//   let key = sessionStorage.key(i);
+//   alert(`${key}: ${sessionStorage.getItem(key)}`);
+// }
+
+</script>
+
+</body>
+</html>
